@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>City Church Landing Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            :root{
+                --body-font: "Segoe UI", sans-serif;
+            }
+            
+            *, *::before, *::after{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            
+            body{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                width:100%;
+                font-family:var(--body-font);
+            }
+            
+            div{
+                height: 350px;
+                width: 350px;
+                padding:30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                border: 1px solid gray;
+                border-radius: 5px;
+            }
+            
+            a{
+                display:block;
+                height:40px;
+                width: 100%;
+                border: 1px solid black;
+                text-align: center;
+                border-radius: 5px;
+                text-decoration: none;
+                padding-top: 7px;
+                color:black;
+                transition: color 0.3s ease;
+            } 
+            
+            a:hover{
+                color:white;
+                background-color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>City Church</h1>
+            <a href="LoginPage.jsp" target="_blank">Login</a>
+            <a href="RegistrationPage.jsp" target="_blank">Register</a>
+        </div>
+    </body>
+</html>

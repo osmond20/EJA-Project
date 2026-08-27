@@ -1,0 +1,8 @@
+com\mycompany\ejaproject\resources\JavaEE8Resource.class
+com\mycompany\ejaproject\JAXRSConfiguration.class
+com\mycompany\ejaproject\RegisterServlet.class
+com\mycompany\ejaproject\LoginServlet.class
+com\mycompany\ejaproject\User.class
+com\mycompany\ejaproject\MessageHandler.class
+com\mycompany\ejaproject\UserManager.class
+com\mycompany\ejaproject\Socket.class
