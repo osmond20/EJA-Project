@@ -2,13 +2,15 @@
     Document   : Notification
     Created on : 25 Aug 2026, 15:07:53
     Author     : osmon
---%>
-
+--%><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="javax.naming.InitialContext"%>
 <%@page import="javax.jms.ConnectionFactory"%>
 <%@page import="javax.jms.Queue"%> 
 <%@page import="javax.jms.JMSContext"%> 
+<c:if test="${sessionScope.currentSessionUser.role != 'CHATTER'}">
+    <c:redirect url="/403.jsp"/>
+</c:if>
 <% 
     if ("POST".equalsIgnoreCase(request.getMethod())) {
         String notification = request.getParameter("notification");
@@ -118,3 +120,5 @@
         </div>
     </body>
 </html>
+
+

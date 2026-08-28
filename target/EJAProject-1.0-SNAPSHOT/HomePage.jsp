@@ -6,6 +6,9 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<c:if test="${sessionScope.currentSessionUser.role != 'CHATTER' && sessionScope.currentSessionUser.role != 'VIEWER' }">
+    <c:redirect url="/403.jsp"/>
+</c:if>
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,6 +33,7 @@
                 min-height: 100vh;
                 width: 95%;
                 font-family: var(--body-font);
+                gap:20px;
             }
             
             .container{
@@ -65,15 +69,13 @@
         </style>
     </head>
     <body>
+        <h1 class="title">Welcome ${sessionScope.currentSessionUser.username}!</h1>
+        
         <div class="container">
             <h1>Church updates</h1>
             <div id="notification-box"></div>
-            <!-- Implementing role based functionality using Java Server Pages Tag Library
-                if the user is a viewer, the link is not added to the HTML
-                and if the user is a chatter, the link is added to the HTML
-            -->
             <c:choose>
-                <c:when test="${sessionScope.currentSessionUser.getRole() == 'VIEWER'}">
+                <c:when test="${sessionScope.currentSessionUser.role != 'CHATTER'}">
                 </c:when>
                 <c:otherwise>
                     <a href="Notification.jsp" class="button">Make an announcement</a>

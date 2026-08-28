@@ -111,10 +111,10 @@
             <h1>Login Page</h1>
              <form action="LoginServlet" method="post">
                     <label>Username</label>
-                    <input type="text" placeholder="Enter your username" name="un">
+                    <input type="text" placeholder="Enter your username" name="un" required>
                     
                     <label>Password</label>
-                    <input type="password" placeholder="Enter your password" name="pw">
+                    <input type="password" placeholder="Enter your password" name="pw" minlength="6" required>
                     
                     <button type="submit">Submit</button>
             </form>

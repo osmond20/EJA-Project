@@ -11,7 +11,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registration Page</title>
         <style>
-            
             :root{
                --body-font: "Segoe UI", sans-serif;
             }
@@ -110,13 +109,13 @@
             <h1>Registration Page</h1>
              <form action="RegisterServlet" method="post">
                     <label>Name</label>
-                    <input type="text" placeholder="Enter your name" name="name">
+                    <input type="text" placeholder="Enter your name" name="name" required >
                  
                     <label>Username</label>
-                    <input type="text" placeholder="Enter your username" name="un">
+                    <input type="text" placeholder="Enter your username" name="un" required>
                     
                     <label>Password</label>
-                    <input type="password" placeholder="Enter your password" name="pw">
+                    <input type="password" placeholder="Enter your password" name="pw"  minlength="6" required>
                     
                     <button type="submit">Submit</button>
             </form>
